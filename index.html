@@ -1,58 +1,52 @@
- 
 <html>
-  <head>
-    <title>Face recognition</title>
+
+<head>
+  <title>FACE RECOGNITION PROJECT</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
 
-   <link rel="stylesheet" href="style.css">
-  
-  </head>
+  <link rel="stylesheet" type="text/css" href="style.css">
 
-  <body>
-  <div class="container">
-    
-    <center>
-      <h3 class="btn btn-default heading">FACE RECOGNITION</h3>
-      <br><br>
+</head>
 
-      <p style="font-size: 22px;">Model is trained to identify the following faces: </p>
-
-      <label>Webcam View - </label>
-
-      <br class="name_of_objects">
-      Me
+<body background="17970408-doodle-family-element.jpg">
+  <center>
+    <h3 class="btn btn-warning heading">Face Recognition Project
       <hr>
-      Mother
-      <hr>
-      Father
-      <hr>
-      Sister
-      <hr>
+      <center>
+        <div class="col-lg6 col-md-6 col-sm-6 col-xs-12 heading_div">
+          Model is trained on
+          <br>
+          <div class="btn btn-warning heading div_2">
+            Me | Sister | Dad | Mom
+          </div>
+        </div>
+      </center>
       <br>
+    </h3>
+    <br><br>
 
-      <label>Webcam Veiw - </label>
-      <div id="camera"></div>
-      <br><br>
-      <div id="result"></div>
-      <br><br>
-      <button onclick="take_snapshot();" class="btn btn-info">Capture Image</button>
-      <br><br>
-      <button onclick="check();" class="btn btn-success">Identify Image</button>
-      <br><br>
+    <p class="btn btn-warning result_para_tag"> Object :
+      <span id="result_object_name"></span>
+    </p>
 
-      <p style="font-size: 22px;">Object :  </p>
-      <p style="font-size: 22px;">Accuracy :  </p>
-    </center>
+    <br><br>
+    <p class="btn btn-warning result_para_tag">Accuracy :
+      <span id="result_object_accuracy"></span>
+    </p>
+  </center>
 
+  <div class="copy_right_footer">
+    Devoloped by - Risha Agarwal
   </div>
 <script src="main.js"></script>
+</body>
 
-  </body>
 </html>
 
- 
+
